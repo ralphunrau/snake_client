@@ -1,14 +1,14 @@
 const net = require('net');
 
-const connect = () => {
+const connect = (host, port, name) => {
   const conn =  net.createConnection({
-    host: '165.227.47.243',
-    port: '50541'
+    host: host,
+    port: port
   });
 
   conn.on('connect', () => {
     console.log('Heelo sah I see you!')
-    conn.write('Name: RMU')
+    conn.write(name)
   })
 
   conn.on("data", (data) => {
