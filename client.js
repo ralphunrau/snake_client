@@ -9,9 +9,6 @@ const connect = () => {
   conn.on('connect', () => {
     console.log('Heelo sah I see you!')
     conn.write('Name: RMU')
-    setInterval(() => {
-      //conn.write('Move: up')
-    }, 50)
   })
 
   conn.on("data", (data) => {
